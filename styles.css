@@ -8,6 +8,7 @@ body{
     font-style: normal;
     max-width: 1440px;
     background-color: #ECF2F8;
+    /* overflow: hidden; */
 }
 h1, h2{
     color: #48556A;
@@ -19,7 +20,68 @@ p{
     letter-spacing: 0.12px;
     color: #6E8098;
 }
-@media (min-width: 600px) and (max-width: 1640px){
+.user-info{
+    display: flex;
+}
+.avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.name-date {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+h2{
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+}
+.name-date .date-of-publish {
+    margin: 0;
+}
+.outer-share{
+    margin-left: auto;
+}
+.share{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background-image: url("./images/Group\ 3.png"); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;    
+    border-radius: 50%;
+    transition: all 0.2s linear;
+}
+.share-hovered{
+    
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background-image: url("./images/hover-pointer.png"); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;    
+    border-radius: 50%;
+}
+.links-outer{
+    display: none;
+}
+.visible {
+    display: block;
+}
+.links span{
+    color: #9DAEC2;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    line-height: 22px;
+    text-transform: uppercase;
+}
+@media (min-width: 600px) {
     
 .container {
     max-width: 730px;
@@ -51,51 +113,8 @@ h1{
     line-height: 28px;
     letter-spacing: 0.25px;
 }
-.user-info{
-    display: flex;
-}
-.avatar{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
 
-.name-date {
-    display: flex;
-    flex-direction: column;
-    margin-left: 16px;
-}
-h2{
-    margin: 0;
-    font-size: 13px;
-    font-weight: 700;
-}
-.name-date .date-of-publish {
-    margin: 0;
-}
-.share{
-    margin-left: auto;
-    position: relative;
-    width: 32px;
-    height: 32px;
-    background-image: url("./images/Group\ 3.png"); 
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat;    
-    border-radius: 50%;
-    transition: all 0.2s linear;
-}
-.share-hovered{
-    margin-left: auto;
-    position: relative;
-    width: 32px;
-    height: 32px;
-    background-image: url("./images/hover-pointer.png"); 
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat;    
-    border-radius: 50%;
-}
+
 .links {
     width: 248px;
     height: 55px;
@@ -110,29 +129,84 @@ h2{
     top: -80px;
     right: -109px;
 }
-.links-outer{
-    display: none;
-}
-.links span{
-    color: #9DAEC2;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 5px;
-    line-height: 20px;
-    text-transform: uppercase;
-}
+
+
 .half-square{
     width: 24px;
     height: 24px;
-    border: 13px solid #48556A;
+    border: 12px solid #48556A;
     border-top-color: transparent;
     position: absolute;
     top: 38px;
     left: 107px;
     transform: rotate(45deg);
+}
+.arrow{
+    display: none;
+}
+
+}
+@media (min-width: 376px) and (max-width: 885px) {
+    
     
 }
-.visible {
-    display: block;
-}
+@media screen and (max-width: 375px) {
+    .container{
+        max-width: 327px;
+        margin: 74px 24px 81px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 10px;
+
+            }
+    .image {
+        height: 200px;
+        background-image: url(./images/drawers.jpg);
+        background-size: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .info {
+        margin: 36px 32px 20px;
+    }
+    h1{
+        margin: 0;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+    }
+    .info p{
+        margin: 12px 0 32px;
+    }
+    .links {
+        max-width: 327px;
+        height: 64px;
+        background-color: #48556A;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin: auto;
+        padding: 22px 32px;
+        display: flex;
+        line-height: 28px;
+        position: absolute;
+        top: -4px;
+        right: -32px;
+    }
+    .links span{
+        margin-right: 21px;
+    }
+    .links a{
+        margin-right: 16px;
+    }
+    .outer-share{
+        margin-left: auto;
+        margin-top: 4px;
+    }
+    .arrow{
+        margin-left: 37px;
+        margin-top: -6px;
+    }
+        
 }
